@@ -8,7 +8,7 @@ countries = [
     "Spain", "Italy", "Japan", "Lithuania", 
     "Estonia", "Latvia", "Romania", "Yugoslavia", #20
     "Greece", "Albania", "Bulgaria", "Hungary", 
-    "Slovakia", "Luxemborg", "Belgium", "Netherlands", "Czechoslovakia", #30
+    "Luxemborg", "Belgium", "Netherlands", "Czechoslovakia", #30
     "Austria", "Portugal", "Switzerland", "Afghanistan", "Iraq", 
     "Oman", "Iran", "Saudi Arabia", "Turkey", "Yemen", #40 
     "Australia", "New Zealand", "Bhutan", "Tibet", "Nepal", #50
