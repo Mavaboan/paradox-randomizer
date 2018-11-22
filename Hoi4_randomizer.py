@@ -12,3 +12,5 @@ countries = [
     "Hungary", "Croatia", "Slovakia", "Luxemborg", "Belgium", "Netherlands",
     "Czechoslovakia", "Austria", "Portugal", "Switzerland", ""
 ]
+
+print(len(countries))
