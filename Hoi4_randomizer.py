@@ -212,6 +212,8 @@ elif countries[random_number] == countries[87]:
     print("flag")
 elif countries[random_number] == countries[88]:
     print("flag")
+elif countries[random_number] == countries[89]:
+    print("flag")
 else:
     print("do nothing")
 #TODO - Add country flags
