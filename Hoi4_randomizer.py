@@ -20,7 +20,7 @@ countries = [
     "Chile", "Colombia", "Bolivia", "Ecuador", "Paraguay", "Peru", "Uruguay", "Venezuela"
 ]
 
-
+print(len(countries))
 #!! Need hardcode the country flags into the code !!
 #Finds out how many countries there are
 country_amount = len(countries)
@@ -115,6 +115,102 @@ elif countries[random_number] == countries[38]:
 elif countries[random_number] == countries[39]:
     print("flag")
 elif countries[random_number] == countries[40]:
+    print("flag")
+elif countries[random_number] == countries[41]:
+    print("flag")
+elif countries[random_number] == countries[42]:
+    print("flag")
+elif countries[random_number] == countries[43]:
+    print("flag")
+elif countries[random_number] == countries[44]:
+    print("flag")
+elif countries[random_number] == countries[45]:
+    print("flag")
+elif countries[random_number] == countries[46]:
+    print("flag")
+elif countries[random_number] == countries[47]:
+    print("flag")
+elif countries[random_number] == countries[48]:
+    print("flag")
+elif countries[random_number] == countries[49]:
+    print("flag")
+elif countries[random_number] == countries[50]:
+    print("flag")
+elif countries[random_number] == countries[51]:
+    print("flag")
+elif countries[random_number] == countries[52]:
+    print("flag")
+elif countries[random_number] == countries[53]:
+    print("flag")
+elif countries[random_number] == countries[54]:
+    print("flag")
+elif countries[random_number] == countries[55]:
+    print("flag")
+elif countries[random_number] == countries[56]:
+    print("flag")
+elif countries[random_number] == countries[57]:
+    print("flag")
+elif countries[random_number] == countries[58]:
+    print("flag")
+elif countries[random_number] == countries[59]:
+    print("flag")
+elif countries[random_number] == countries[60]:
+    print("flag")
+elif countries[random_number] == countries[61]:
+    print("flag")
+elif countries[random_number] == countries[62]:
+    print("flag")
+elif countries[random_number] == countries[63]:
+    print("flag")
+elif countries[random_number] == countries[64]:
+    print("flag")
+elif countries[random_number] == countries[65]:
+    print("flag")
+elif countries[random_number] == countries[66]:
+    print("flag")
+elif countries[random_number] == countries[67]:
+    print("flag")
+elif countries[random_number] == countries[68]:
+    print("flag")
+elif countries[random_number] == countries[69]:
+    print("flag")
+elif countries[random_number] == countries[70]:
+    print("flag")
+elif countries[random_number] == countries[71]:
+    print("flag")
+elif countries[random_number] == countries[72]:
+    print("flag")
+elif countries[random_number] == countries[73]:
+    print("flag")
+elif countries[random_number] == countries[74]:
+    print("flag")
+elif countries[random_number] == countries[75]:
+    print("flag")
+elif countries[random_number] == countries[76]:
+    print("flag")
+elif countries[random_number] == countries[77]:
+    print("flag")
+elif countries[random_number] == countries[78]:
+    print("flag")
+elif countries[random_number] == countries[79]:
+    print("flag")
+elif countries[random_number] == countries[80]:
+    print("flag")
+elif countries[random_number] == countries[81]:
+    print("flag")
+elif countries[random_number] == countries[82]:
+    print("flag")
+elif countries[random_number] == countries[83]:
+    print("flag")
+elif countries[random_number] == countries[84]:
+    print("flag")
+elif countries[random_number] == countries[85]:
+    print("flag")
+elif countries[random_number] == countries[86]:
+    print("flag")
+elif countries[random_number] == countries[87]:
+    print("flag")
+elif countries[random_number] == countries[88]:
     print("flag")
 else:
     print("do nothing")
