@@ -22,4 +22,6 @@ countries = [
     "Chile", "Colombia", "Bolivia", "Ecuador", "Paraguay", "Peru", "Uruguay", "Venezuela"
 ]
 
+#!! Need hardcode the country flags into the code !!
+
 print(len(countries))
