@@ -23,15 +23,19 @@ countries = [
     "Chile", "Colombia", "Bolivia", "Ecuador", "Paraguay", "Peru", "Uruguay", "Venezuela"
 ]
 
+
 #!! Need to hardcode the country flags into the code !!
 #Finds out how many countries there are
+
 country_amount = len(countries)
-#Finds a random number between 0 and the amount of countries we have
+#Finds a random number between 0 and the amount of countries we have.
 random_number = random.randint(0,country_amount)
+
 #Prints a text telling user which country 
 #Will be deleted later on when GUI is finished
 print("Your country is gonna be")
-#Prints the name of a country from the list, based on the random number
+#Prints the name of a country from the list, based on the randm number
+
 print(countries[random_number])
 
 #TODO - Add country flags
