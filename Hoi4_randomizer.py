@@ -21,7 +21,11 @@ countries = [
 ]
 
 #!! Need hardcode the country flags into the code !!
-
+#Finds out how many countries there are
 country_amount = len(countries)
+#Finds a random number between 0 and the amount of countries we have
 random_number = random.randint(0,country_amount)
+#Prints the name of a country from the list, based on the random number
 print(countries[random_number])
+
+#TODO - Add country flags
