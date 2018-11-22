@@ -1,7 +1,5 @@
 import random
 
-print("Hello world!")
-
 #All countries added!!
 #The different countrys numbers added automaticly and starts with 0
 countries = [
@@ -24,4 +22,6 @@ countries = [
 
 #!! Need hardcode the country flags into the code !!
 
-print(len(countries))
+country_amount = len(countries)
+random_number = random.randint(0,country_amount)
+print(countries[random_number])
