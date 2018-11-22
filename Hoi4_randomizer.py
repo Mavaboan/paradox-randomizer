@@ -24,7 +24,7 @@ countries = [
     "Peru", "Uruguay", "Venezuela"
 ]
 
-print(len(countries))
+
 #!! Need hardcode the country flags into the code !!
 #Finds out how many countries there are
 country_amount = len(countries)
