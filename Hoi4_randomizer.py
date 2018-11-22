@@ -3,20 +3,18 @@ import random
 #All countries added!!
 #The different countrys numbers added automaticly and starts with 0
 countries = [
-    "Denmark", 
-    "Norway", "Finland", "UK", "USA", "Soviet Union", 
+    "Denmark", "Norway", "Finland", "UK", "USA", "Soviet Union", 
     "Poland",  "Ireland", "Sweden", "Germany", "France", #10
-    "Spain", "Italy", "Japan", "Iceland", "Lithuania", 
-    "Estonia", "Latvia", "Romania", "Yugoslavia", "Serbia", #20
-    "Greece", "Albania", "Bulgaria", "Hungary", "Croatia", 
+    "Spain", "Italy", "Japan", "Lithuania", 
+    "Estonia", "Latvia", "Romania", "Yugoslavia", #20
+    "Greece", "Albania", "Bulgaria", "Hungary", 
     "Slovakia", "Luxemborg", "Belgium", "Netherlands", "Czechoslovakia", #30
     "Austria", "Portugal", "Switzerland", "Afghanistan", "Iraq", 
-    "Oman", "Iran", "Saudi Arabia", "Turkey", "Yemen", #40
-    "Egypt", "Syria", "Lebonon", "Jordan", "Libya", 
+    "Oman", "Iran", "Saudi Arabia", "Turkey", "Yemen", #40 
     "Australia", "New Zealand", "Bhutan", "Tibet", "Nepal", #50
     "British Raj", "Philipines", "Siam", "China", "Guangxi Clique", 
     "Peoples Republic of China", "Shanxi", "Xibei San Ma", "Sinkian", "Yunnan", #60
-    "Mongolia", "Mengkukuo", "Tannu Tuva", "Korea", "Liberia", 
+    "Mongolia", "Mengkukuo", "Tannu Tuva", "Liberia", 
     "Ethiopia", "South Africa", "Canada", "Mexico", "Costa Rica", #70
     "El Salvadore", "Guatamala", "Honduras", "Nicaragua", "Panama", 
     "Cuba", "Dominican Republic", "Haiti", "Brazil", "Argentina", #80
@@ -24,7 +22,7 @@ countries = [
     "Peru", "Uruguay", "Venezuela"
 ]
 
-
+print(len(countries))
 #!! Need hardcode the country flags into the code !!
 #Finds out how many countries there are
 country_amount = len(countries)
@@ -67,156 +65,136 @@ def country_flag():
     elif countries[random_number] == countries[13]:
         print("JAP_facsism.tga")
     elif countries[random_number] == countries[14]:
-        print("flag")
-    elif countries[random_number] == countries[15]:
         print("LIT_neutrality.tga")
-    elif countries[random_number] == countries[16]:
+    elif countries[random_number] == countries[15]:
         print("EST_neutrality.tga")
-    elif countries[random_number] == countries[17]:
+    elif countries[random_number] == countries[16]:
         print("LAT_neutrality.tga")
-    elif countries[random_number] == countries[18]:
+    elif countries[random_number] == countries[17]:
         print("ROM_neutrality.tga")
-    elif countries[random_number] == countries[19]:
+    elif countries[random_number] == countries[18]:
         print("YUG_neutrality.tga")
-    elif countries[random_number] == countries[20]:
-        print("flag")
-    elif countries[random_number] == countries[21]:
+    elif countries[random_number] == countries[19]:
         print("GRE_neutrality.tga")
-    elif countries[random_number] == countries[22]:
+    elif countries[random_number] == countries[20]:
         print("ALB_neutrality.tga")
-    elif countries[random_number] == countries[23]:
+    elif countries[random_number] == countries[21]:
         print("BUL_neutrality.tga")
-    elif countries[random_number] == countries[24]:
+    elif countries[random_number] == countries[22]:
         print("HUN_facsism.tga")
-    elif countries[random_number] == countries[25]:
-        print("flag")
-    elif countries[random_number] == countries[26]:
+    elif countries[random_number] == countries[23]:
         print("SLO_facsism.tga")
-    elif countries[random_number] == countries[27]:
+    elif countries[random_number] == countries[24]:
         print("LUX_democratic.tga")
-    elif countries[random_number] == countries[28]:
-        print("flag")
-    elif countries[random_number] == countries[29]:
+    elif countries[random_number] == countries[25]:
         print("HOL_democratic.tga")
-    elif countries[random_number] == countries[30]:
+    elif countries[random_number] == countries[26]:
         print("CZE_democratic.tga")
-    elif countries[random_number] == countries[31]:
+    elif countries[random_number] == countries[27]:
         print("AUS_neutrality.tga")
-    elif countries[random_number] == countries[32]:
+    elif countries[random_number] == countries[28]:
         print("POR_neutrality.tga")
-    elif countries[random_number] == countries[33]:
+    elif countries[random_number] == countries[29]:
         print("SWI_democratic.tga")
-    elif countries[random_number] == countries[34]:
+    elif countries[random_number] == countries[30]:
         print("AFG_neutrality.tga")
-    elif countries[random_number] == countries[35]:
+    elif countries[random_number] == countries[31]:
         print("IRQ_neutrality.tga")
-    elif countries[random_number] == countries[36]:
+    elif countries[random_number] == countries[32]:
         print("OMA_neutrality.tga")
-    elif countries[random_number] == countries[37]:
+    elif countries[random_number] == countries[33]:
         print("PER_neutrality.tga")
-    elif countries[random_number] == countries[38]:
+    elif countries[random_number] == countries[34]:
         print("SAU_neutrality.tga")
-    elif countries[random_number] == countries[39]:
+    elif countries[random_number] == countries[35]:
         print("TUR_neutrality.tga")
-    elif countries[random_number] == countries[40]:
+    elif countries[random_number] == countries[36]:
         print("YEM_neutrality.tga")
-    elif countries[random_number] == countries[41]:
-        print("flag")
-    elif countries[random_number] == countries[42]:
+    elif countries[random_number] == countries[37]:
         print("PHI_democratic.tga")
-    elif countries[random_number] == countries[43]:
+    elif countries[random_number] == countries[38]:
         print("SIA_facsism.tga")
-    elif countries[random_number] == countries[44]:
-        print("flag")
-    elif countries[random_number] == countries[45]:
+    elif countries[random_number] == countries[39]:
         print("GXC_neutrality.tga")
-    elif countries[random_number] == countries[46]:
+    elif countries[random_number] == countries[40]:
         print("AST_democratic.tga")
-    elif countries[random_number] == countries[47]:
+    elif countries[random_number] == countries[41]:
         print("NZL_democratic.tga")
-    elif countries[random_number] == countries[48]:
+    elif countries[random_number] == countries[42]:
         print("BHU_neutrality.tga")
-    elif countries[random_number] == countries[49]:
+    elif countries[random_number] == countries[43]:
         print("TIB_neutrality.tga")
-    elif countries[random_number] == countries[50]:
+    elif countries[random_number] == countries[44]:
         print("NEP_neutrality.tga")
-    elif countries[random_number] == countries[51]:
+    elif countries[random_number] == countries[45]:
         print("RAJ_neutrality.tga")
-    elif countries[random_number] == countries[52]:
+    elif countries[random_number] == countries[46]:
         print("MEN_facsism.tga")
-    elif countries[random_number] == countries[53]:
+    elif countries[random_number] == countries[47]:
         print("SIA_neutrality.tga")
-    elif countries[random_number] == countries[54]:
+    elif countries[random_number] == countries[48]:
         print("CHI_neutrality.tga")
-    elif countries[random_number] == countries[55]:
+    elif countries[random_number] == countries[49]:
         print("LIB_democratic.tga")
-    elif countries[random_number] == countries[56]:
+    elif countries[random_number] == countries[50]:
         print("PRC_communism.tga")
-    elif countries[random_number] == countries[57]:
+    elif countries[random_number] == countries[51]:
         print("SHX_neutrality.tga")
-    elif countries[random_number] == countries[58]:
+    elif countries[random_number] == countries[52]:
         print("XSM_neutrality.tga")
-    elif countries[random_number] == countries[59]:
+    elif countries[random_number] == countries[53]:
         print("SIK_communism.tga")
-    elif countries[random_number] == countries[60]:
+    elif countries[random_number] == countries[54]:
         print("YUN_neutrality.tga")
-    elif countries[random_number] == countries[61]:
+    elif countries[random_number] == countries[55]:
         print("MON_communism.tga")
-    elif countries[random_number] == countries[62]:
-        print("flag")
-    elif countries[random_number] == countries[63]:
+    elif countries[random_number] == countries[56]:
         print("TAN_communism.tga")
-    elif countries[random_number] == countries[64]:
-        print("flag")
-    elif countries[random_number] == countries[65]:
-        print("flag")
-    elif countries[random_number] == countries[66]:
+    elif countries[random_number] == countries[57]:
         print("ETH_neutrality.tga")
-    elif countries[random_number] == countries[67]:
+    elif countries[random_number] == countries[58]:
         print("SAF_democratic.tga")
-    elif countries[random_number] == countries[68]:
+    elif countries[random_number] == countries[59]:
         print("CAN_democratic.tga")
-    elif countries[random_number] == countries[69]:
+    elif countries[random_number] == countries[60]:
         print("MEX_neutrality.tga")
-    elif countries[random_number] == countries[70]:
+    elif countries[random_number] == countries[61]:
         print("COS_democratic.tga")
-    elif countries[random_number] == countries[71]:
+    elif countries[random_number] == countries[62]:
         print("ELS_facsism.tga")
-    elif countries[random_number] == countries[72]:
+    elif countries[random_number] == countries[63]:
         print("GUA__neutrality.tga")
-    elif countries[random_number] == countries[73]:
+    elif countries[random_number] == countries[64]:
         print("HON_democratic.tga")
-    elif countries[random_number] == countries[74]:
+    elif countries[random_number] == countries[65]:
         print("NIC_democratic.tga")
-    elif countries[random_number] == countries[75]:
+    elif countries[random_number] == countries[66]:
         print("PAN_democratic.tga")
-    elif countries[random_number] == countries[76]:
+    elif countries[random_number] == countries[67]:
         print("CUB_democratic.tga")
-    elif countries[random_number] == countries[77]:
+    elif countries[random_number] == countries[68]:
         print("DOM_facsism.tga")
-    elif countries[random_number] == countries[78]:
+    elif countries[random_number] == countries[69]:
         print("HAI_democratic.tga")
-    elif countries[random_number] == countries[79]:
+    elif countries[random_number] == countries[70]:
         print("BRA_neutrality.tga")
-    elif countries[random_number] == countries[80]:
+    elif countries[random_number] == countries[71]:
         print("ARG_neutrality.tga")
-    elif countries[random_number] == countries[81]:
+    elif countries[random_number] == countries[72]:
         print("CHL_democratic.tga")
-    elif countries[random_number] == countries[82]:
+    elif countries[random_number] == countries[73]:
         print("COL_democratic.tga")
-    elif countries[random_number] == countries[83]:
+    elif countries[random_number] == countries[74]:
         print("BOL_neutrality.tga")
-    elif countries[random_number] == countries[84]:
+    elif countries[random_number] == countries[75]:
         print("ECU_democratic.tga")
-    elif countries[random_number] == countries[85]:
+    elif countries[random_number] == countries[76]:
         print("PAR_communism.tga")
-    elif countries[random_number] == countries[86]:
-        print("flag")
-    elif countries[random_number] == countries[87]:
+    elif countries[random_number] == countries[77]:
         print("PRU_facsism.tga")
-    elif countries[random_number] == countries[88]:
+    elif countries[random_number] == countries[78]:
         print("URG.tga")
-    elif countries[random_number] == countries[89]:
+    elif countries[random_number] == countries[79]:
         print("VEN_facsism.tga")
     else:
         print("Do nothing")
