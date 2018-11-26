@@ -31,6 +31,8 @@ class myFrame(wx.Frame):
     def closewindow(self, event):
         self.Destroy()
 
+
+#This is black magic
 if __name__ =='__main__':
     app = wx.PySimpleApp()
     frame=myFrame(parent=None,id=-1)
