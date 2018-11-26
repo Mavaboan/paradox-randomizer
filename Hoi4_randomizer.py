@@ -211,7 +211,7 @@ def country_flag():
 #Shows an image of your country's flag - currently always shows Denmark
 
 #Opens the Denmark flag .tga file
-im = Image.open("DEN_democratic.tga")
+im = Image.open(country_flag)
 
 #If you stare into the abyss, the abyss stares back
 #Converts the .tga file to a .jpg
