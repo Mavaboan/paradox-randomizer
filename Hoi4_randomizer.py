@@ -31,7 +31,7 @@ countries = [
 
 country_amount = len(countries)
 #Finds a random number between 0 and the amount of countries we have.
-random_number = random.randint(0,0)
+random_number = random.randint(0,country_amount)
 
 #Prints a text telling user which country 
 #Will be deleted later on when GUI is finished
