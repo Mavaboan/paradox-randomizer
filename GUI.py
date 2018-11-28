@@ -3,11 +3,11 @@ import wx
 class myFrame(wx.Frame):
 
     def __init__(self, parent, id):
-        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(300,200))
+        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(900,800))
 
         #The exit button
         panel = wx.Panel(self)
-        button = wx.Button(panel, label = "exit", pos=(130,10), size=(60,60))
+        button = wx.Button(panel, label = "exit", pos=(130,10), size=(152,152))
         self.Bind(wx.EVT_BUTTON, self.closebutton, button)
         self.Bind(wx.EVT_CLOSE, self.closewindow)
 
