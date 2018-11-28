@@ -1,10 +1,11 @@
+#Imports.
 from __future__ import print_function
 import random
 from PIL import Image
 import sys, os
 land = "Flag"
-#All countries added!!
-#The different countrys numbers added automaticly and starts with 0
+#All countries added!
+#The different countries numbers added automaticly and starts with 0.
 countries = [
     "Denmark", "Norway", "Finland", "UK", "USA", "Soviet Union", 
     "Poland",  "Ireland", "Sweden", "Germany", "France", #10
@@ -24,24 +25,21 @@ countries = [
     "Chile", "Colombia", "Bolivia", "Ecuador", "Paraguay", 
     "Peru", "Uruguay", "Venezuela"
 ]
-
-#!! Need to hardcode the country flags into the code !!
-
-#Finds out how many countries there are
-
+#Finds out how many countries there are.
 country_amount = len(countries)
 #Finds a random number between 0 and the amount of countries we have.
 random_number = random.randint(0,country_amount)
 
-#Prints a text telling user which country 
-#Will be deleted later on when GUI is finished
+#Prints a text telling user which country.
+#Will be deleted later on when GUI is finished.
 print("Your country is gonna be")
 
-#Prints the name of a country from the list, based on the randm number
+#Prints the name of a country from the list, and the foun number, based on the random number.
 
 print(countries[random_number])
 print(random_number)
 
+#Finds the flag if the selected country.
 def country_flag():
     if countries[random_number] == countries[0]:
 
@@ -206,16 +204,12 @@ def country_flag():
         return "Flags\Relevant_flags\VEN_fascism.tga"
     else:
         print("can't find flag")
-#TODO - Add country flags
 
 
-#Shows an image of your country's flag - currently always shows Denmark
-print(land)
-#Opens the Denmark flag .tga file
+#Opens the image of the flag .tga file.
 im = Image.open(country_flag())
 
-
-#If you stare into the abyss, the abyss stares back
+#If you stare into the abyss, the abyss stares back.
 #Converts the .tga file to a .jpg
 for infile in sys.argv[1:]:
     f, e = os.path.splitext(infile)
@@ -223,8 +217,8 @@ for infile in sys.argv[1:]:
     if infile != outfile:
         try:
             Image.open(infile).save(outfile)
-        #If a mistake happens, gives an error message
+        #If a mistake happens, gives an error message.
         except IOError:
             print("cannot convert", infile)
-#Shows the .jpg file
+#Shows the .jpg file.
 im.show()
