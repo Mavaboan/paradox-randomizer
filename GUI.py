@@ -2,12 +2,14 @@ import wx
 
 class myFrame(wx.Frame):
 
+    #Makes the program starts automaticly
     def __init__(self, parent, id):
+        #Creates a frame with the size 900 high and 800 width and the name Paradox Randomizer
         wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(900,800))
 
         #The exit button
         panel = wx.Panel(self)
-        button = wx.Button(panel, label = "exit", pos=(130,10), size=(60,60))
+        button = wx.Button(panel, label = "exit", pos=(130,60), size=(60,60))
         self.Bind(wx.EVT_BUTTON, self.closebutton, button)
         self.Bind(wx.EVT_CLOSE, self.closewindow)
 
@@ -43,12 +45,15 @@ class myFrame(wx.Frame):
         if test.ShowModal() == wx.ID_OK:
             apples = test.GetValue()
         #text panel which shows the data from apples
-        wx.StaticText(panel, -1, apples, (10,50))
+        wx.StaticText(panel, -1, apples, (10,60))
 
-
+    #Creates a closeButton function
+    #The function closes the program
     def closebutton(self, event):
         self.Close(True)
     
+    #Creates a function called closeWindow
+    #The function destroys the program
     def closewindow(self, event):
         self.Destroy()
 
