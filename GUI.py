@@ -13,7 +13,7 @@ class myFrame(wx.Frame):
         self.Bind(wx.EVT_BUTTON, self.closebutton, button)
         self.Bind(wx.EVT_CLOSE, self.closewindow)
 
-        #Adds an statusbar tp GUI
+        #Adds an statusbar to GUI
         status = self.CreateStatusBar()
         #Holds the menu File and edit
         menubar = wx.MenuBar()
@@ -45,7 +45,7 @@ class myFrame(wx.Frame):
         if test.ShowModal() == wx.ID_OK:
             apples = test.GetValue()
         #text panel which shows the data from apples
-        wx.StaticText(panel, -1, apples, (10,60))
+        wx.StaticText(panel, -1, apples, (50,60))
 
     #Creates a closeButton function
     #The function closes the program
