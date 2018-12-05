@@ -1,11 +1,24 @@
 import wx
 
+
+#wx.Image.AddHandler(wx.InitAllImageHandlers)
+#def myData(wx.GetData(self)):
+ #   return 'Flags\Relevant_flags\DEN_democratic.tga'
+#print(myData)
+
+class MyData:
+    def __init__(self, ):
+
+
+
+
+
 class myFrame(wx.Frame):
 
     #Makes the program starts automaticly
     def __init__(self, parent, id):
         #Creates a frame with the size 900 high and 800 width and the name Paradox Randomizer
-        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(900,800))
+        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(650,450))
 
         #The exit button
         panel = wx.Panel(self)
@@ -26,6 +39,9 @@ class myFrame(wx.Frame):
         menubar.Append(second, "Edit")
         self.SetMenuBar(menubar)
 
+        # wx.ImageList(name, type = wx.BITMAP_TYPE_ANY, index = -1)
+
+
         #Creates a static text that is 10 pixels down and 10 pixels across
         wx.StaticText(panel, -1, "This i static text", (10,10))
 
@@ -38,14 +54,17 @@ class myFrame(wx.Frame):
         #This is where the 260 in the custom variable comes in
         custom.SetBackgroundColour('blue')
 
-        panel = wx.Panel(self)
-        #User prompt that let's the user enter something
-        test = wx.TextEntryDialog(None, "Whats your name", "Title", "Enter name")
-        #if they clicked ok the data gets stored in apples
-        if test.ShowModal() == wx.ID_OK:
-            apples = test.GetValue()
-        #text panel which shows the data from apples
-        wx.StaticText(panel, -1, apples, (50,60))
+
+
+        #panel = wx.Panel(self)
+               #User prompt that let's the user enter something
+        #test = wx.TextEntryDialog(None, "Whats your name", "Title", "Enter name")
+               #if they clicked ok the data gets stored in apples
+        #if test.ShowModal() == wx.ID_OK:
+        #    apples = test.GetValue()
+                #text panel which shows the data from apples
+        #wx.StaticText(panel, -1, apples, (50,60))
+
 
     #Creates a closeButton function
     #The function closes the program
