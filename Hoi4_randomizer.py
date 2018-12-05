@@ -4,7 +4,6 @@ import random
 from PIL import Image
 import sys, os
 land = "Flag"
-#All countries added!
 #The different countries numbers added automaticly and starts with 0.
 countries = [
     "Denmark", "Norway", "Finland", "UK", "USA", "Soviet Union", 
@@ -205,20 +204,25 @@ def country_flag():
     else:
         print("can't find flag")
 
-
 #Opens the image of the flag .tga file.
 im = Image.open(country_flag())
 
 #If you stare into the abyss, the abyss stares back.
 #Converts the .tga file to a .jpg
+
+#Sets up a for loop with the variable "infile"(which is the file we want to make a jpg.) in system arguments.
 for infile in sys.argv[1:]:
+    #Splits the "infile" in two parts, a root and an ext. Then makes "f" the root and "e" the ext.
     f, e = os.path.splitext(infile)
+    #Defines outfile as "f" plus ".jpg"
     outfile = f + ".jpg"
+    #Checks if the "infile" is the same as the "outfile"
     if infile != outfile:
+        #Saves the .tga as a .jpg
         try:
             Image.open(infile).save(outfile)
         #If a mistake happens, gives an error message.
         except IOError:
             print("cannot convert", infile)
-#Shows the .jpg file.
+#Shows the saved .jpg file.
 im.show()
