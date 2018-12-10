@@ -1,17 +1,6 @@
 import wx
 
 
-#wx.Image.AddHandler(wx.InitAllImageHandlers)
-#def myData(wx.GetData(self)):
- #   return 'Flags\Relevant_flags\DEN_democratic.tga'
-#print(myData)
-
-class MyData:
-    def __init__(self, ):
-
-
-
-
 
 class myFrame(wx.Frame):
 
@@ -28,20 +17,21 @@ class myFrame(wx.Frame):
 
         #Adds an statusbar to GUI
         status = self.CreateStatusBar()
+        """
         #Holds the menu File and edit
         menubar = wx.MenuBar()
         first = wx.Menu()
         second = wx.Menu()
         #Adds items to the first menu file
+        
         first.Append(wx.NewId() , "New Window", "This is a new window" )
         first.Append(wx.NewId(), "Open...", "This will open a new window" )
         menubar.Append(first, "File")
         menubar.Append(second, "Edit")
         self.SetMenuBar(menubar)
+        """
 
-        # wx.ImageList(name, type = wx.BITMAP_TYPE_ANY, index = -1)
-
-
+        """
         #Creates a static text that is 10 pixels down and 10 pixels across
         wx.StaticText(panel, -1, "This i static text", (10,10))
 
@@ -53,7 +43,9 @@ class myFrame(wx.Frame):
         #Sets the custom variable to have the bakcgroundcolour to blue t
         #This is where the 260 in the custom variable comes in
         custom.SetBackgroundColour('blue')
-
+        """
+        png = wx.Image("DEN_democratic.png", wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
 
 
         #panel = wx.Panel(self)
