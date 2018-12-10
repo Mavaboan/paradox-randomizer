@@ -1,5 +1,5 @@
 import wx
-
+import Hoi4_randomizer
 
 
 class myFrame(wx.Frame):
