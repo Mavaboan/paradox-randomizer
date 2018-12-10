@@ -3,7 +3,6 @@ from __future__ import print_function
 import random
 from PIL import Image
 import sys, os
-land = "Flag"
 #The different countries numbers added automaticly and starts with 0.
 countries = [
     "Denmark", "Norway", "Finland", "UK", "USA", "Soviet Union", 
