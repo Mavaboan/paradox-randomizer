@@ -1,10 +1,9 @@
+#Imports.
 from __future__ import print_function
 import random
 from PIL import Image
-import os, sys
-
-#All countries added!!
-#The different countrys numbers added automaticly and starts with 0
+import sys, os
+#The different countries numbers added automaticly and starts with 0.
 countries = [
     "Denmark", "Norway", "Finland", "UK", "USA", "Soviet Union", 
     "Poland",  "Ireland", "Sweden", "Germany", "France", #10
@@ -24,205 +23,203 @@ countries = [
     "Chile", "Colombia", "Bolivia", "Ecuador", "Paraguay", 
     "Peru", "Uruguay", "Venezuela"
 ]
-
-#!! Need to hardcode the country flags into the code !!
-
-#Finds out how many countries there are
-
+#Finds out how many countries there are.
 country_amount = len(countries)
 #Finds a random number between 0 and the amount of countries we have.
 random_number = random.randint(0,country_amount)
 
-#Prints a text telling user which country 
-#Will be deleted later on when GUI is finished
+#Prints a text telling user which country.
+#Will be deleted later on when GUI is finished.
 print("Your country is gonna be")
 
-#Prints the name of a country from the list, based on the randm number
+#Prints the name of a country from the list, and the foun number, based on the random number.
 
 print(countries[random_number])
 print(random_number)
 
+#Finds the flag of the selected country.
 def country_flag():
     if countries[random_number] == countries[0]:
-        print("DEN_democratic.tga")
+
+        return "Flags\Relevant_flags\DEN_democratic.tga"
     elif countries[random_number] == countries[1]:
-        print("NOR_democratic.tga")
+        return ("Flags\Relevant_flags\\NOR_democratic.tga")
     elif countries[random_number] == countries[2]:
-        print("FIN_neutrality.tga")
+        return ("Flags\Relevant_flags\FIN_neutrality.tga")
     elif countries[random_number] == countries[3]:
-        print("ENG_democratic.tga")
+        return ("Flags\Relevant_flags\ENG_democratic.tga")
     elif countries[random_number] == countries[4]:
-        print("USA_democratic.tga")
+        return ("Flags\Relevant_flags\AMERICA_democratic.tga")
     elif countries[random_number] == countries[5]:
-        print("SOV_communism.tga")
+        return ("Flags\Relevant_flags\SOV_communism.tga")
     elif countries[random_number] == countries[6]:
-        print("POL_neutrality.tga")
+        return ("Flags\Relevant_flags\POL_neutrality.tga")
     elif countries[random_number] == countries[7]:
-        print("IRE_democratic.tga")
+        return ("Flags\Relevant_flags\IRE_democratic.tga")
     elif countries[random_number] == countries[8]:
-        print("SWE_democratic.tga")
+        return ("Flags\Relevant_flags\SWE_democratic.tga")
     elif countries[random_number] == countries[9]:
-        print("GER_facsism.tga")
+        return ("Flags\Relevant_flags\GER_fascism.tga")
     elif countries[random_number] == countries[10]:
-        print("FRA_democratic.tga")
+        return ("Flags\Relevant_flags\FRA_democratic.tga")
     elif countries[random_number] == countries[11]:
-        print("SPR_democratic.tga")
+        return ("Flags\Relevant_flags\SPR_democratic.tga")
     elif countries[random_number] == countries[12]:
-        print("ITA_facsism.tga")
+        return ("Flags\Relevant_flags\ITA_fascism.tga")
     elif countries[random_number] == countries[13]:
-        print("JAP_facsism.tga")
+        return ("Flags\Relevant_flags\JAP_fascism.tga")
     elif countries[random_number] == countries[14]:
-        print("LIT_neutrality.tga")
+        return ("Flags\Relevant_flags\LIT_neutrality.tga")
     elif countries[random_number] == countries[15]:
-        print("EST_neutrality.tga")
+        return ("Flags\Relevant_flags\EST_neutrality.tga")
     elif countries[random_number] == countries[16]:
-        print("LAT_neutrality.tga")
+        return ("Flags\Relevant_flags\LAT_neutrality.tga")
     elif countries[random_number] == countries[17]:
-        print("ROM_neutrality.tga")
+        return ("Flags\Relevant_flags\ROM_neutrality.tga")
     elif countries[random_number] == countries[18]:
-        print("YUG_neutrality.tga")
+        return ("Flags\Relevant_flags\YUG_neutrality.tga")
     elif countries[random_number] == countries[19]:
-        print("GRE_neutrality.tga")
+        return ("Flags\Relevant_flags\GRE_neutrality.tga")
     elif countries[random_number] == countries[20]:
-        print("ALB_neutrality.tga")
+        return ("Flags\Relevant_flags\ALB_neutrality.tga")
     elif countries[random_number] == countries[21]:
-        print("BUL_neutrality.tga")
+        return ("Flags\Relevant_flags\BUL_neutrality.tga")
     elif countries[random_number] == countries[22]:
-        print("HUN_facsism.tga")
+        return ("Flags\Relevant_flags\HUN_fascism.tga")
     elif countries[random_number] == countries[23]:
-        print("SLO_facsism.tga")
+        return ("Flags\Relevant_flags\SLO_fascism.tga")
     elif countries[random_number] == countries[24]:
-        print("LUX_democratic.tga")
+        return ("Flags\Relevant_flags\LUX_democratic.tga")
     elif countries[random_number] == countries[25]:
-        print("HOL_democratic.tga")
+        return ("Flags\Relevant_flags\HOL_democratic.tga")
     elif countries[random_number] == countries[26]:
-        print("CZE_democratic.tga")
+        return ("Flags\Relevant_flags\CZE_democratic.tga")
     elif countries[random_number] == countries[27]:
-        print("AUS_neutrality.tga")
+        return ("Flags\Relevant_flags\AUS_neutrality.tga")
     elif countries[random_number] == countries[28]:
-        print("POR_neutrality.tga")
+        return ("Flags\Relevant_flags\POR_neutrality.tga")
     elif countries[random_number] == countries[29]:
-        print("SWI_democratic.tga")
+        return ("Flags\Relevant_flags\SWI_democratic.tga")
     elif countries[random_number] == countries[30]:
-        print("AFG_neutrality.tga")
+        return ("Flags\Relevant_flags\AFG_neutrality.tga")
     elif countries[random_number] == countries[31]:
-        print("IRQ_neutrality.tga")
+        return ("Flags\Relevant_flags\IRQ_neutrality.tga")
     elif countries[random_number] == countries[32]:
-        print("OMA_neutrality.tga")
+        return ("Flags\Relevant_flags\OMA_neutrality.tga")
     elif countries[random_number] == countries[33]:
-        print("PER_neutrality.tga")
+        return ("Flags\Relevant_flags\PER_neutrality.tga")
     elif countries[random_number] == countries[34]:
-        print("SAU_neutrality.tga")
+        return ("Flags\Relevant_flags\SAU_neutrality.tga")
     elif countries[random_number] == countries[35]:
-        print("TUR_neutrality.tga")
+        return ("Flags\Relevant_flags\TUR_neutrality.tga")
     elif countries[random_number] == countries[36]:
-        print("YEM_neutrality.tga")
+        return ("Flags\Relevant_flags\YEM_neutrality.tga")
     elif countries[random_number] == countries[37]:
-        print("PHI_democratic.tga")
+        return ("Flags\Relevant_flags\AUS_democratic.tga")
     elif countries[random_number] == countries[38]:
-        print("SIA_facsism.tga")
+        return ("Flags\Relevant_flags\\NZL_democratic.tga")
     elif countries[random_number] == countries[39]:
-        print("GXC_neutrality.tga")
+        return ("Flags\Relevant_flags\BHU_neutrality.tga")
     elif countries[random_number] == countries[40]:
-        print("AST_democratic.tga")
+        return ("Flags\Relevant_flags\TIB_neutrality.tga")
     elif countries[random_number] == countries[41]:
-        print("NZL_democratic.tga")
+        return ("Flags\Relevant_flags\\NEP_neutrality.tga")
     elif countries[random_number] == countries[42]:
-        print("BHU_neutrality.tga")
+        return ("Flags\Relevant_flags\RAJ_neutrality.tga")
     elif countries[random_number] == countries[43]:
-        print("TIB_neutrality.tga")
+        return ("Flags\Relevant_flags\PHI_democratic.tga")
     elif countries[random_number] == countries[44]:
-        print("NEP_neutrality.tga")
+        return ("Flags\Relevant_flags\SIA_neutrality.tga")
     elif countries[random_number] == countries[45]:
-        print("RAJ_neutrality.tga")
+        return ("Flags\Relevant_flags\CHI_neutrality.tga")
     elif countries[random_number] == countries[46]:
-        print("MEN_facsism.tga")
+        return ("Flags\Relevant_flags\GXC_neutrality.tga")
     elif countries[random_number] == countries[47]:
-        print("SIA_neutrality.tga")
+        return ("Flags\Relevant_flags\PRC_communism.tga")
     elif countries[random_number] == countries[48]:
-        print("CHI_neutrality.tga")
+        return ("Flags\Relevant_flags\SHX_neutrality.tga")
     elif countries[random_number] == countries[49]:
-        print("LIB_democratic.tga")
+        return ("Flags\Relevant_flags\XSM_neutrality.tga")
     elif countries[random_number] == countries[50]:
-        print("PRC_communism.tga")
+        return ("Flags\Relevant_flags\SIK_communism.tga")
     elif countries[random_number] == countries[51]:
-        print("SHX_neutrality.tga")
+        return ("Flags\Relevant_flags\YUN_neutrality.tga")
     elif countries[random_number] == countries[52]:
-        print("XSM_neutrality.tga")
+        return ("Flags\Relevant_flags\MON_communism.tga")
     elif countries[random_number] == countries[53]:
-        print("SIK_communism.tga")
+        return ("Flags\Relevant_flags\MEN.tga")
     elif countries[random_number] == countries[54]:
-        print("YUN_neutrality.tga")
+        return ("Flags\Relevant_flags\TAN_communism.tga")
     elif countries[random_number] == countries[55]:
-        print("MON_communism.tga")
+        return ("Flags\Relevant_flags\LIB_democratic.tga")
     elif countries[random_number] == countries[56]:
-        print("TAN_communism.tga")
+        return ("Flags\Relevant_flags\ETH_neutrality.tga")
     elif countries[random_number] == countries[57]:
-        print("ETH_neutrality.tga")
+        return ("Flags\Relevant_flags\SAF_democratic.tga")
     elif countries[random_number] == countries[58]:
-        print("SAF_democratic.tga")
+        return ("Flags\Relevant_flags\CAN_democratic.tga")
     elif countries[random_number] == countries[59]:
-        print("CAN_democratic.tga")
+        return ("Flags\Relevant_flags\MEX_neutrality.tga")
     elif countries[random_number] == countries[60]:
-        print("MEX_neutrality.tga")
+        return ("Flags\Relevant_flags\COS_democratic.tga")
     elif countries[random_number] == countries[61]:
-        print("COS_democratic.tga")
+        return ("Flags\Relevant_flags\ELS_fascism.tga")
     elif countries[random_number] == countries[62]:
-        print("ELS_facsism.tga")
+        return ("Flags\Relevant_flags\GUA__neutrality.tga")
     elif countries[random_number] == countries[63]:
-        print("GUA__neutrality.tga")
+        return ("Flags\Relevant_flags\HON_democratic.tga")
     elif countries[random_number] == countries[64]:
-        print("HON_democratic.tga")
+        return ("Flags\Relevant_flags\\NIC_neutrality.tga")
     elif countries[random_number] == countries[65]:
-        print("NIC_democratic.tga")
+        return ("Flags\Relevant_flags\PAN_democratic.tga")
     elif countries[random_number] == countries[66]:
-        print("PAN_democratic.tga")
+        return ("Flags\Relevant_flags\CUB_democratic.tga")
     elif countries[random_number] == countries[67]:
-        print("CUB_democratic.tga")
+        return ("Flags\Relevant_flags\DOM_fascism.tga")
     elif countries[random_number] == countries[68]:
-        print("DOM_facsism.tga")
+        return ("Flags\Relevant_flags\HAI_democratic.tga")
     elif countries[random_number] == countries[69]:
-        print("HAI_democratic.tga")
+        return ("Flags\Relevant_flags\BRA_neutrality.tga")
     elif countries[random_number] == countries[70]:
-        print("BRA_neutrality.tga")
+        return ("Flags\Relevant_flags\ARG_neutrality.tga")
     elif countries[random_number] == countries[71]:
-        print("ARG_neutrality.tga")
+        return ("Flags\Relevant_flags\CHL_democratic.tga")
     elif countries[random_number] == countries[72]:
-        print("CHL_democratic.tga")
+        return ("Flags\Relevant_flags\COL_democratic.tga")
     elif countries[random_number] == countries[73]:
-        print("COL_democratic.tga")
+        return ("Flags\Relevant_flags\BOL_neutrality.tga")
     elif countries[random_number] == countries[74]:
-        print("BOL_neutrality.tga")
+        return ("Flags\Relevant_flags\ECU_democratic.tga")
     elif countries[random_number] == countries[75]:
-        print("ECU_democratic.tga")
+        return ("Flags\Relevant_flags\PAR_communism.tga")
     elif countries[random_number] == countries[76]:
-        print("PAR_communism.tga")
+        return ("Flags\Relevant_flags\PRU_fascism.tga")
     elif countries[random_number] == countries[77]:
-        print("PRU_facsism.tga")
+        return ("Flags\Relevant_flags\YKR.tga")
     elif countries[random_number] == countries[78]:
-        print("URG.tga")
-    elif countries[random_number] == countries[79]:
-        print("VEN_facsism.tga")
+        return "Flags\Relevant_flags\VEN_fascism.tga"
     else:
-        print("Do nothing")
-#TODO - Add country flags
+        print("can't find flag")
 
+#Opens the image of the flag .tga file.
+im = Image.open(country_flag())
 
-#Shows an image of your country's flag - currently always shows Denmark
-
-#Opens the Denmark flag .tga file
-im = Image.open("DEN_democratic.tga")
-
-#If you stare into the abyss, the abyss stares back
+#If you stare into the abyss, the abyss stares back.
 #Converts the .tga file to a .jpg
+
+#Sets up a for loop with the variable "infile"(which is the file we want to make a jpg.) in system arguments.
 for infile in sys.argv[1:]:
+    #Splits the "infile" in two parts, a root and an ext. Then makes "f" the root and "e" the ext.
     f, e = os.path.splitext(infile)
+    #Defines outfile as "f" plus ".jpg"
     outfile = f + ".jpg"
+    #Checks if the "infile" is the same as the "outfile"
     if infile != outfile:
+        #Saves the .tga as a .jpg
         try:
             Image.open(infile).save(outfile)
-        #If a mistake happens, gives an error message
+        #If a mistake happens, gives an error message.
         except IOError:
             print("cannot convert", infile)
-#Shows the .jpg file
+#Shows the saved .jpg file.
 im.show()

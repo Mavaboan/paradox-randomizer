@@ -44,8 +44,8 @@ class myFrame(wx.Frame):
         #This is where the 260 in the custom variable comes in
         custom.SetBackgroundColour('blue')
         """
-        png = wx.Image("DEN_democratic.png", wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-        wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
+        png = wx.Image(Hoi4_randomizer.infile, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        wx.StaticBitmap(self, -1, jpg, (30,10), (png.GetWidth(), png.GetHeight()))
 
 
         #panel = wx.Panel(self)
