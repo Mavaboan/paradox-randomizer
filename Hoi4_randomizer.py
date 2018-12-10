@@ -37,7 +37,7 @@ print("Your country is gonna be")
 print(countries[random_number])
 print(random_number)
 
-#Finds the flag if the selected country.
+#Finds the flag of the selected country.
 def country_flag():
     if countries[random_number] == countries[0]:
 
