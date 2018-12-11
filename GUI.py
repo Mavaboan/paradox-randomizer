@@ -28,9 +28,11 @@ class myFrame(wx.Frame):
         menubar.Append(second, "Edit")
         self.SetMenuBar(menubar)
 
-        png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-        wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
-
+        def pictureStuff():
+            png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+            wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
+        button2 = wx.Button(panel, label = "Spin the wheel", pos = (200,60), size = (60,60))
+        self.Bind(wx,EVT_BUTTON, self.imagebutton, button2)
 
         """
         #Creates a static text that is 10 pixels down and 10 pixels across
