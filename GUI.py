@@ -1,5 +1,5 @@
 import wx
-import Hoi4_randomizer
+from Hoi4_randomizer import *
 
 
 class myFrame(wx.Frame):
@@ -7,7 +7,7 @@ class myFrame(wx.Frame):
     #Makes the program starts automaticly
     def __init__(self, parent, id):
         #Creates a frame with the size 900 high and 800 width and the name Paradox Randomizer
-        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(650,450))
+        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(900,800))
 
         #The exit button
         panel = wx.Panel(self)
@@ -17,19 +17,20 @@ class myFrame(wx.Frame):
 
         #Adds an statusbar to GUI
         status = self.CreateStatusBar()
-        """
         #Holds the menu File and edit
         menubar = wx.MenuBar()
         first = wx.Menu()
         second = wx.Menu()
         #Adds items to the first menu file
-        
         first.Append(wx.NewId() , "New Window", "This is a new window" )
         first.Append(wx.NewId(), "Open...", "This will open a new window" )
         menubar.Append(first, "File")
         menubar.Append(second, "Edit")
         self.SetMenuBar(menubar)
-        """
+
+        png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
+
 
         """
         #Creates a static text that is 10 pixels down and 10 pixels across
@@ -43,21 +44,16 @@ class myFrame(wx.Frame):
         #Sets the custom variable to have the bakcgroundcolour to blue t
         #This is where the 260 in the custom variable comes in
         custom.SetBackgroundColour('blue')
+        
+        panel = wx.Panel(self)
+        #User prompt that let's the user enter something
+        test = wx.TextEntryDialog(None, "Whats your name", "Title", "Enter name")
+        #if they clicked ok the data gets stored in apples
+        if test.ShowModal() == wx.ID_OK:
+            apples = test.GetValue()
+        #text panel which shows the data from apples
+        wx.StaticText(panel, -1, apples, (50,60))
         """
-        png = wx.Image(Hoi4_randomizer.infile, wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-        wx.StaticBitmap(self, -1, jpg, (30,10), (png.GetWidth(), png.GetHeight()))
-
-
-        #panel = wx.Panel(self)
-               #User prompt that let's the user enter something
-        #test = wx.TextEntryDialog(None, "Whats your name", "Title", "Enter name")
-               #if they clicked ok the data gets stored in apples
-        #if test.ShowModal() == wx.ID_OK:
-        #    apples = test.GetValue()
-                #text panel which shows the data from apples
-        #wx.StaticText(panel, -1, apples, (50,60))
-
-
     #Creates a closeButton function
     #The function closes the program
     def closebutton(self, event):
