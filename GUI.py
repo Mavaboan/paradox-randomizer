@@ -7,12 +7,12 @@ class myFrame(wx.Frame):
     #Makes the program starts automaticly
     def __init__(self, parent, id):
         #Creates a frame with the size 900 high and 800 width and the name Paradox Randomizer
-        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(900,800))
+        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(400,400))
 
         #The exit button
         panel = wx.Panel(self)
-        button = wx.Button(panel, label = "exit", pos=(100,60), size=(60,60))
-        self.Bind(wx.EVT_BUTTON, self.closebutton, button)
+        #button = wx.Button(panel, label = "exit", pos=(450,350), size=(100,100))
+        #self.Bind(wx.EVT_BUTTON, self.closebutton, button)
         self.Bind(wx.EVT_CLOSE, self.closewindow)
 
         #Adds an statusbar to GUI
@@ -22,16 +22,52 @@ class myFrame(wx.Frame):
         first = wx.Menu()
         second = wx.Menu()
         #Adds items to the first menu file
-        first.Append(wx.NewId() , "New Window", "This is a new window" )
-        first.Append(wx.NewId(), "Open...", "This will open a new window" )
+        first.Append(wx.NewId() , "New Window", "This feature will come in a future version" )
+        first.Append(wx.NewId(), "Open...", "This feature will come in a future version" )
         menubar.Append(first, "File")
         menubar.Append(second, "Edit")
         self.SetMenuBar(menubar)
 
-        button2 = wx.Button(panel, label = "Spin the wheel", pos = (200,60), size = (100,100))
+        button2 = wx.Button(panel, label = "Spin the wheel", pos = (150,150), size = (100,100))
         self.Bind(wx.EVT_BUTTON, self.imagebutton, button2)
 
-        """
+
+    #Creates a closeButton function
+    #The function closes the program
+    def closebutton(self, event):
+        self.Close(True)
+    
+    #Creates a function called closeWindow
+    #The function destroys the program
+    def closewindow(self, event):
+        self.Destroy()
+    #Creates a function called imagebutton
+    #The function shows the country on the first click and the flag on the second
+    def imagebutton(self, event):
+        png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        wx.StaticBitmap(self, -1, png, (160,80), (png.GetWidth(), png.GetHeight()))
+        wx.StaticText(self, -1, countries[random_number], (165,60))
+
+
+
+
+
+
+
+#This is black magic
+if __name__ =='__main__':
+    app = wx.PySimpleApp()
+    frame=myFrame(parent=None, id=-1)
+    frame.Show()
+    app.MainLoop()
+
+
+
+
+"""
+        ==================================== UNUSED STUFF MAY BE NEEDED FOR LATER USE ====================================
+
+
         #Creates a static text that is 10 pixels down and 10 pixels across
         wx.StaticText(panel, -1, "This i static text", (10,10))
 
@@ -52,32 +88,4 @@ class myFrame(wx.Frame):
             apples = test.GetValue()
         #text panel which shows the data from apples
         wx.StaticText(panel, -1, apples, (50,60))
-        """
-    #Creates a closeButton function
-    #The function closes the program
-    def closebutton(self, event):
-        self.Close(True)
-    
-    #Creates a function called closeWindow
-    #The function destroys the program
-    def closewindow(self, event):
-        self.Destroy()
-    #Creates a function called imagebutton
-    #The function shows the country on the first click and the flag on the second
-    def imagebutton(self, event):
-        png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-        wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
-        wx.StaticText(self, -1, countries[random_number], (10,10))
-
-
-
-
-
-
-
-#This is black magic
-if __name__ =='__main__':
-    app = wx.PySimpleApp()
-    frame=myFrame(parent=None, id=-1)
-    frame.Show()
-    app.MainLoop()
+"""
