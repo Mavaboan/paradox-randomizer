@@ -1,99 +1,83 @@
-#!/bin/python
-"""
-Hello World, but with more meat.
-"""
-
 import wx
-
-class HelloFrame(wx.Frame):
-    """
-    A Frame that says Hello World
-    """
-
-    def __init__(self, *args, **kw):
-        # ensure the parent's __init__ is called
-        super(HelloFrame, self).__init__(*args, **kw)
-
-        # create a panel in the frame
-        pnl = wx.Panel(self)
-
-        # and put some text with a larger bold font on it
-        st = wx.StaticText(pnl, label="Hello People!", pos=(30,25))
-        font = st.GetFont()
-        font.PointSize += 10
-        font = font.Bold()
-        st.SetFont(font)
-
-        # create a menu bar
-        self.makeMenuBar()
-
-        # and a status bar
-        self.CreateStatusBar()
-        self.SetStatusText("Welcome to wxPython!")
+from Hoi4_randomizer import *
 
 
-    def makeMenuBar(self):
+class myFrame(wx.Frame):
+
+    #Makes the program starts automaticly
+    def __init__(self, parent, id):
+        #Creates a frame with the size 900 high and 800 width and the name Paradox Randomizer
+        wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(900,800))
+
+        #The exit button
+        panel = wx.Panel(self)
+        button = wx.Button(panel, label = "exit", pos=(100,60), size=(60,60))
+        self.Bind(wx.EVT_BUTTON, self.closebutton, button)
+        self.Bind(wx.EVT_CLOSE, self.closewindow)
+
+        #Adds an statusbar to GUI
+        status = self.CreateStatusBar()
+        #Holds the menu File and edit
+        menubar = wx.MenuBar()
+        first = wx.Menu()
+        second = wx.Menu()
+        #Adds items to the first menu file
+        first.Append(wx.NewId() , "New Window", "This is a new window" )
+        first.Append(wx.NewId(), "Open...", "This will open a new window" )
+        menubar.Append(first, "File")
+        menubar.Append(second, "Edit")
+        self.SetMenuBar(menubar)
+
+        button2 = wx.Button(panel, label = "Spin the wheel", pos = (200,60), size = (100,100))
+        self.Bind(wx.EVT_BUTTON, self.imagebutton, button2)
+
         """
-        A menu bar is composed of menus, which are composed of menu items.
-        This method builds a set of menus and binds handlers to be called
-        when the menu item is selected.
+        #Creates a static text that is 10 pixels down and 10 pixels across
+        wx.StaticText(panel, -1, "This i static text", (10,10))
+
+        #Makes a variable called custom and creates a text which is 10 down 
+        #and 30 across and has colour 260 pixels across and is aligned left
+        custom = wx.StaticText(panel, -1, "this is custom", (10,30), (260,-1), wx.ALIGN_CENTER)
+        #Sets the custom variabel to have a text colour of white
+        custom.SetForegroundColour('white')
+        #Sets the custom variable to have the bakcgroundcolour to blue t
+        #This is where the 260 in the custom variable comes in
+        custom.SetBackgroundColour('blue')
+        
+        panel = wx.Panel(self)
+        #User prompt that let's the user enter something
+        test = wx.TextEntryDialog(None, "Whats your name", "Title", "Enter name")
+        #if they clicked ok the data gets stored in apples
+        if test.ShowModal() == wx.ID_OK:
+            apples = test.GetValue()
+        #text panel which shows the data from apples
+        wx.StaticText(panel, -1, apples, (50,60))
         """
-
-        # Make a file menu with Hello and Exit items
-        fileMenu = wx.Menu()
-        # The "\t..." syntax defines an accelerator key that also triggers
-        # the same event
-        helloItem = fileMenu.Append(-1, "&Hello...\tCtrl-H",
-                "Help string shown in status bar for this menu item")
-        fileMenu.AppendSeparator()
-        # When using a stock ID we don't need to specify the menu item's
-        # label
-        exitItem = fileMenu.Append(wx.ID_EXIT)
-
-        # Now a help menu for the about item
-        helpMenu = wx.Menu()
-        aboutItem = helpMenu.Append(wx.ID_ABOUT)
-
-        # Make the menu bar and add the two menus to it. The '&' defines
-        # that the next letter is the "mnemonic" for the menu item. On the
-        # platforms that support it those letters are underlined and can be
-        # triggered from the keyboard.
-        menuBar = wx.MenuBar()
-        menuBar.Append(fileMenu, "&File")
-        menuBar.Append(helpMenu, "&Help")
-
-        # Give the menu bar to the frame
-        self.SetMenuBar(menuBar)
-
-        # Finally, associate a handler function with the EVT_MENU event for
-        # each of the menu items. That means that when that menu item is
-        # activated then the associated handler function will be called.
-        self.Bind(wx.EVT_MENU, self.OnHello, helloItem)
-        self.Bind(wx.EVT_MENU, self.OnExit,  exitItem)
-        self.Bind(wx.EVT_MENU, self.OnAbout, aboutItem)
-
-
-    def OnExit(self, event):
-        """Close the frame, terminating the application."""
+    #Creates a closeButton function
+    #The function closes the program
+    def closebutton(self, event):
         self.Close(True)
+    
+    #Creates a function called closeWindow
+    #The function destroys the program
+    def closewindow(self, event):
+        self.Destroy()
+    #Creates a function called imagebutton
+    #The function shows the country on the first click and the flag on the second
+    def imagebutton(self, event):
+        png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
+        wx.StaticText(self, -1, countries[random_number], (10,10))
 
 
-    def OnHello(self, event):
-        """Say hello to the user."""
-        wx.MessageBox("Hello again from wxPython")
 
 
-    def OnAbout(self, event):
-        """Display an About Dialog"""
-        wx.MessageBox("This is a wxPython Hello World sample",
-                      "About Hello World 2",
-                      wx.OK|wx.ICON_INFORMATION)
 
 
-if __name__ == '__main__':
-    # When this module is run (not imported) then create the app, the
-    # frame, show it, and start the event loop.
-    app = wx.App()
-    frm = HelloFrame(None, title='Hello World 2')
-    frm.Show()
+
+#This is black magic
+if __name__ =='__main__':
+    app = wx.PySimpleApp()
+    frame=myFrame(parent=None, id=-1)
+    frame.Show()
     app.MainLoop()

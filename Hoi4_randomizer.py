@@ -208,6 +208,7 @@ im = Image.open(country_flag())
 #If you stare into the abyss, the abyss stares back.
 #Converts the .png file to a .jpg
 
+
 #Sets up a for loop with the variable "infile"(which is the file we want to make a jpg.) in system arguments.
 for infile in sys.argv[1:]:
     #Splits the "infile" in two parts, a root and an ext. Then makes "f" the root and "e" the ext.
