@@ -41,6 +41,7 @@ print(random_number)
 def country_flag():
     if countries[random_number] == countries[0]:
 
+
         return "Flags\Relevant_flags\DEN_democratic.tga"
     elif countries[random_number] == countries[1]:
         return ("Flags\Relevant_flags\\NOR_democratic.tga")
@@ -200,12 +201,13 @@ def country_flag():
         return "Flags\Relevant_flags\VEN_fascism.tga"
     else:
         print("can't find flag")
-
+"""
 #Opens the image of the flag .tga file.
 im = Image.open(country_flag())
 
 #If you stare into the abyss, the abyss stares back.
 #Converts the .tga file to a .jpg
+
 
 #Sets up a for loop with the variable "infile"(which is the file we want to make a jpg.) in system arguments.
 for infile in sys.argv[1:]:
@@ -215,7 +217,9 @@ for infile in sys.argv[1:]:
     outfile = f + ".jpg"
     #Checks if the "infile" is the same as the "outfile"
     if infile != outfile:
+
         #Saves the .tga as a .jpg
+
         try:
             Image.open(infile).save(outfile)
         #If a mistake happens, gives an error message.
@@ -223,3 +227,4 @@ for infile in sys.argv[1:]:
             print("cannot convert", infile)
 #Shows the saved .jpg file.
 im.show()
+"""
