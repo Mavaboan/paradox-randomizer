@@ -11,7 +11,7 @@ class myFrame(wx.Frame):
 
         #The exit button
         panel = wx.Panel(self)
-        button = wx.Button(panel, label = "exit", pos=(130,60), size=(60,60))
+        button = wx.Button(panel, label = "exit", pos=(100,60), size=(60,60))
         self.Bind(wx.EVT_BUTTON, self.closebutton, button)
         self.Bind(wx.EVT_CLOSE, self.closewindow)
 
@@ -28,11 +28,8 @@ class myFrame(wx.Frame):
         menubar.Append(second, "Edit")
         self.SetMenuBar(menubar)
 
-        def pictureStuff():
-            png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-            wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
-        button2 = wx.Button(panel, label = "Spin the wheel", pos = (200,60), size = (60,60))
-        self.Bind(wx,EVT_BUTTON, self.imagebutton, button2)
+        button2 = wx.Button(panel, label = "Spin the wheel", pos = (200,60), size = (100,100))
+        self.Bind(wx.EVT_BUTTON, self.imagebutton, button2)
 
         """
         #Creates a static text that is 10 pixels down and 10 pixels across
@@ -65,7 +62,12 @@ class myFrame(wx.Frame):
     #The function destroys the program
     def closewindow(self, event):
         self.Destroy()
-
+    #Creates a function called imagebutton
+    #The function shows the country on the first click and the flag on the second
+    def imagebutton(self, event):
+        png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        wx.StaticBitmap(self, -1, png, (30,10), (png.GetWidth(), png.GetHeight()))
+        wx.StaticText(self, -1, countries[random_number], (10,10))
 
 
 
