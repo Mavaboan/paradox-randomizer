@@ -50,10 +50,6 @@ class myFrame(wx.Frame):
 
 
 
-
-
-
-
 #This is black magic
 if __name__ =='__main__':
     app = wx.PySimpleApp()
