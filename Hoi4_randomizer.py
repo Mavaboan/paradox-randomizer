@@ -3,7 +3,7 @@ from __future__ import print_function
 import random
 from PIL import Image
 import sys, os
-#The different countries numbers added automaticly and starts with 0.
+#The different countries added to an array. Starts at 0.
 countries = [
     "Denmark", "Norway", "Finland", "UK", "USA", "Soviet Union", 
     "Poland",  "Ireland", "Sweden", "Germany", "France", #10
@@ -28,16 +28,7 @@ country_amount = len(countries)
 #Finds a random number between 0 and the amount of countries we have.
 random_number = random.randint(0,country_amount)
 
-#Prints a text telling user which country.
-#Will be deleted later on when GUI is finished.
-print("Your country is gonna be")
-
-#Prints the name of a country from the list, and the foun number, based on the random number.
-
-print(countries[random_number])
-print(random_number)
-
-#Finds the flag of the selected country.
+#Sets up a function to find the flag of the selected country.
 def country_flag():
     if countries[random_number] == countries[0]:
 
@@ -201,13 +192,13 @@ def country_flag():
     else:
         print("can't find flag")
 
+#Below code is no longer needed, this is now done in the GUI. Keeping it just in case. 
 """
 #Opens the image of the flag .png file.
 im = Image.open(country_flag())
 
 #If you stare into the abyss, the abyss stares back.
 #Converts the .png file to a .jpg
-
 
 #Sets up a for loop with the variable "infile"(which is the file we want to make a jpg.) in system arguments.
 for infile in sys.argv[1:]:
