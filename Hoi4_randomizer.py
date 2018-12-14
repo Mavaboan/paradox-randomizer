@@ -106,7 +106,7 @@ def country_flag():
     elif countries[random_number] == countries[36]:
         return ("Flags\Relevant_flags\YEM_neutrality.png")
     elif countries[random_number] == countries[37]:
-        return ("Flags\Relevant_flags\AUS_democratic.png")
+        return ("Flags\Relevant_flags\AST_democratic.png")
     elif countries[random_number] == countries[38]:
         return ("Flags\Relevant_flags\\NZL_democratic.png")
     elif countries[random_number] == countries[39]:
