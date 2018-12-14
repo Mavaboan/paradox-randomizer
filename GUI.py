@@ -1,56 +1,77 @@
+#Imports the libary wxPython which is the library used to create the GUI
 import wx
+#Imports the Ho4_randomizer file we created look in folder for file
 from Hoi4_randomizer import *
 
 
+#Creates a class with the name myFrame using the class wx.Frame which 
+#is the class used the open up a window
 class myFrame(wx.Frame):
 
-    #Makes the program starts automaticly
+    #Makes the program starts automaticly using the method __init__ taking the 
+    #parameters self, parent, id
     def __init__(self, parent, id):
         #Creates a frame with the size 900 high and 800 width and the name Paradox Randomizer
         wx.Frame.__init__(self, parent, id, 'Paradox Randomizer', size=(400,400))
 
-        #The exit button
+        #Creates the panel inside the frame it's where everything the user is gonna use 
+        #for example the button
         panel = wx.Panel(self)
-        #button = wx.Button(panel, label = "exit", pos=(450,350), size=(100,100))
-        #self.Bind(wx.EVT_BUTTON, self.closebutton, button)
-        self.Bind(wx.EVT_CLOSE, self.closewindow)
 
         #Adds an statusbar to GUI
+        #Makes a variable called status using wxPythons function CreateStatusBar 
+        #which creates an status bar
         status = self.CreateStatusBar()
-        #Holds the menu File and edit
+        
+        #Creates a menu bar at the top of the window stored in the variable 
         menubar = wx.MenuBar()
+        #Adds a menu to menubar called first and second 
         first = wx.Menu()
         second = wx.Menu()
-        #Adds items to the first menu file
+
+        #Adds a option in the first menu called new window which has a text in the status bar 
         first.Append(wx.NewId() , "New Window", "This feature will come in a future version" )
+        #Adds another option to the first menu with other name but same text
         first.Append(wx.NewId(), "Open...", "This feature will come in a future version" )
+        #Tells what the first and second menu is gonna be called which is file and edit
         menubar.Append(first, "File")
         menubar.Append(second, "Edit")
+        #Does so the menubar actual shows
         self.SetMenuBar(menubar)
 
+        #creates a button in the panel with the name spin the wheel at the position 150 pixels across
+        #and 150 pixels down with the height and width of 100 pixels
         button2 = wx.Button(panel, label = "Spin the wheel", pos = (150,150), size = (100,100))
+        #Does so the button can be pressed and something happens based on the imagebutton function
+        #created further down
         self.Bind(wx.EVT_BUTTON, self.imagebutton, button2)
 
 
-    #Creates a closeButton function
-    #The function closes the program
-    def closebutton(self, event):
-        self.Close(True)
+
     
     #Creates a function called closeWindow
-    #The function destroys the program
+    #The function destroys the program using the function Destroy
     def closewindow(self, event):
         self.Destroy()
+
     #Creates a function called imagebutton
     #The function shows the country on the first click and the flag on the second
     def imagebutton(self, event):
+        #Creates a variable called png which is using our function from 
+        #the other file called countryflag then it checks which type if picture it is
+        #and then converts it to bitmap so it can be used in the GUI
         png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+        #Makes a static bitmap using our png variable at the position 160 pixels across and 80 pixels down
+        #Then using the width and height of the image
         wx.StaticBitmap(self, -1, png, (160,80), (png.GetWidth(), png.GetHeight()))
+        #Creates an text based on the random country we got in Ho4_randomizer
+        #Then puts it at the position 165 pixels across and 60 pixels down
         wx.StaticText(self, -1, countries[random_number], (165,60))
 
 
 
 #This is black magic
+#The whole if  statement starts the program 
 if __name__ =='__main__':
     app = wx.PySimpleApp()
     frame=myFrame(parent=None, id=-1)
@@ -84,4 +105,13 @@ if __name__ =='__main__':
             apples = test.GetValue()
         #text panel which shows the data from apples
         wx.StaticText(panel, -1, apples, (50,60))
+
+        #button = wx.Button(panel, label = "exit", pos=(450,350), size=(100,100))
+        #self.Bind(wx.EVT_BUTTON, self.closebutton, button)
+        self.Bind(wx.EVT_CLOSE, self.closewindow)
+
+        #Creates a closeButton function
+        #The function closes the program
+        def closebutton(self, event):
+            self.Close(True)
 """
