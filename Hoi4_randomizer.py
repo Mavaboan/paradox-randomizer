@@ -194,6 +194,10 @@ def country_flag():
 
 #Below code is no longer needed, this is now done in the GUI. Keeping it just in case. 
 """
+
+ ==================================== Used for debuggin pictures may be in later versions ====================================
+
+
 #Opens the image of the flag .png file.
 im = Image.open(country_flag())
 
