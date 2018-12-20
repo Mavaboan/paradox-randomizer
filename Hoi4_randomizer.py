@@ -192,10 +192,16 @@ def country_flag():
 #Below code is no longer needed, this is now done in the GUI. Keeping it just in case. 
 
 """
+<<<<<<< HEAD
 #imports 
 from PIL import Image
 import sys, os
 from __future__ import print_function
+=======
+
+ ==================================== Used for debuggin pictures may be in later versions ====================================
+
+>>>>>>> 0d9bca565c30eee02ccc5a32e8b1779c4c68b22e
 
 #Opens the image of the flag .png file.
 im = Image.open(country_flag())
