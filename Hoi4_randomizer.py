@@ -23,12 +23,12 @@ countries = [
     "Chile", "Colombia", "Bolivia", "Ecuador", "Paraguay", 
     "Peru", "Uruguay", "Venezuela"
 ]
-#Finds out how many countries there are.
+#Finds out how many countries there are in the countries array.
 country_amount = len(countries)
 #Finds a random number between 0 and the amount of countries we have.
 random_number = random.randint(0,country_amount)
 
-#Sets up a function to find the flag of the selected country.
+#Sets up a function to return the flag of the selected country, based on which random number was found.
 def country_flag():
     if countries[random_number] == countries[0]:
 
@@ -106,7 +106,7 @@ def country_flag():
     elif countries[random_number] == countries[36]:
         return ("Flags\Relevant_flags\YEM_neutrality.png")
     elif countries[random_number] == countries[37]:
-        return ("Flags\Relevant_flags\AST_democratic.png")
+        return ("Flags\Relevant_flags\AUS_democratic.png")
     elif countries[random_number] == countries[38]:
         return ("Flags\Relevant_flags\\NZL_democratic.png")
     elif countries[random_number] == countries[39]:
