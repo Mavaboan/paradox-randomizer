@@ -1,8 +1,5 @@
-#Imports.
-from __future__ import print_function
+#Imports random, used for finding random part of the random country.
 import random
-from PIL import Image
-import sys, os
 #The different countries added to an array. Starts at 0.
 countries = [
     "Denmark", "Norway", "Finland", "UK", "USA", "Soviet Union", 
@@ -28,7 +25,7 @@ country_amount = len(countries)
 #Finds a random number between 0 and the amount of countries we have.
 random_number = random.randint(0,country_amount)
 
-#Sets up a function to return the flag of the selected country, based on which random number was found.
+#Sets up a function to return the flag file of the randomly selected country, based on which random number was found.
 def country_flag():
     if countries[random_number] == countries[0]:
 
@@ -193,7 +190,13 @@ def country_flag():
         print("can't find flag")
 
 #Below code is no longer needed, this is now done in the GUI. Keeping it just in case. 
+
 """
+#imports 
+from PIL import Image
+import sys, os
+from __future__ import print_function
+
 #Opens the image of the flag .png file.
 im = Image.open(country_flag())
 
