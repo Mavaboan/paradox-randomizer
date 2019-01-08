@@ -57,16 +57,18 @@ class myFrame(wx.Frame):
     #Creates a function called imagebutton
     #The function shows the country on the first click and the flag on the second
     def imagebutton(self, event):
-        #Creates a variable called png which is using our function from 
-        #the other file called countryflag then it checks which type if picture it is
-        #and then converts it to bitmap so it can be used in the GUI
-        png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
-        #Makes a static bitmap using our png variable at the position 160 pixels across and 80 pixels down
-        #Then using the width and height of the image
-        wx.StaticBitmap(self, -1, png, (160,80), (png.GetWidth(), png.GetHeight()))
-        #Creates an text based on the random country we got in Ho4_randomizer
-        #Then puts it at the position 165 pixels across and 60 pixels down
-        wx.StaticText(self, -1, countries[random_number], (165,60))
+
+        for i in range(2):
+            #Creates a variable called png which is using our function from 
+            #the other file called countryflag then it checks which type if picture it is
+            #and then converts it to bitmap so it can be used in the GUI
+            png = wx.Image(country_flag(), wx.BITMAP_TYPE_ANY).ConvertToBitmap()
+            #Makes a static bitmap using our png variable at the position 160 pixels across and 80 pixels down
+            #Then using the width and height of the image
+            wx.StaticBitmap(self, -1, png, (160,80), (png.GetWidth(), png.GetHeight()))
+            #Creates an text based on the random country we got in Ho4_randomizer
+            #Then puts it at the position 165 pixels across and 60 pixels down
+            wx.StaticText(self, -1, countries[random_number], (165,60))
 
 
 
