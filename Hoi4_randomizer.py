@@ -22,8 +22,10 @@ countries = [
 ]
 #Finds out how many countries there are in the countries array.
 country_amount = len(countries)
+
 #Finds a random number between 0 and the amount of countries we have.
 random_number = random.randint(0,country_amount)
+   
 print(country_amount)
 #Sets up a function to return the flag file of the randomly selected country, based on which random number was found.
 def country_flag():
